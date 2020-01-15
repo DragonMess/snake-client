@@ -13,12 +13,8 @@ const connect = function() {
 
   return conn;
 }
+console.log('Connecting ...');
+connect();
+
 module.exports = {connect};
-
-console.log('Connecting ...');
-connect();
-
-// play.js
-const { connect } = require('./client');
-console.log('Connecting ...');
-connect();
+// export function like object
