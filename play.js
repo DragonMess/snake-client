@@ -9,12 +9,11 @@ let conn = connect();
 //put return of fonction connect in conn
 
 
-conn.on('connect', (play) => {
+conn.on('connect', () => {
   console.log('Successfully connected to game server');
   // client.write('Hello there!');// data for client
-});
-
-
-conn.on('connect', (play) => {
   conn.write('Camilo');
+  setInterval(() => conn.write('Move: up'), 1000);
+  setInterval(() => conn.write('Move: left'), 1500);
 });
+
