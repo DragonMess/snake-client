@@ -8,13 +8,10 @@ const connect = function() {
     host: '192.168.0.103',
     port: 50541
   });
-  // interpret incoming data as text
-  conn.setEncoding('utf8'); 
 
   return conn;
 }
-console.log('Connecting ...');
-connect();
 
 module.exports = {connect};
-// export function like object
+// export function like object 
+// 
