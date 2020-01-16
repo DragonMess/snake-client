@@ -9,6 +9,18 @@ const connect = function() {
     port: 50541
   });
 
+  conn.on('connect', () => {
+    console.log('Successfully connected to game server');
+    // client.write('Hello there!');// data for client
+    conn.write('Name: Cam');
+    // setInterval(() => conn.write('Move: up'), 1000);
+    
+  });
+  conn.on("data",(data)=> {
+    console.log("This server says, ", data)
+  })
+
+
   return conn;
 }
 
