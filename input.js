@@ -16,6 +16,9 @@ const handleUserInput = function(key,connection) {
  }else if (key === "d") {
   keyT ="Move: right";
   console.log("d");
+ }else if (key === "q") {
+  keyT ="Say: K.O.";
+  console.log("q");
  }
  console.log('keyT', keyT)
  connection.write(keyT);

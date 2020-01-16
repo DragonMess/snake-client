@@ -4,7 +4,8 @@ const net = require('net');
  */
 const connect = function() {
   const conn = net.createConnection({ 
-    host: '192.168.0.103',
+    // host: '192.168.0.103',
+    host: '10.0.2.15',
     port: 50541
   });
 
@@ -12,6 +13,7 @@ const connect = function() {
     console.log('Successfully connected to game server');
     // client.write('Hello there!');// data for client
     conn.write('Name: Cam');
+    
     // setInterval(() => conn.write('Move: up'), 1000);
     
   });
